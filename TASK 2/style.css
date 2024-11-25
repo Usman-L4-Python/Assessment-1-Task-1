@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #070410;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.main {
+    max-width: 900px;
+    width: 100%;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #231651;
+    border-bottom: 1px solid #4DCCBD;
+}
+
+.logo {
+    font-family: 'Teko', sans-serif;
+    font-size: 2em;
+    color: #FFFFFF;
+}
+
+.menu {
+    display: flex;
+    gap: 16px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #4DCCBD;
+    font-size: 1em;
+}
+
+.menu a:hover {
+    color: #EEF36A;
+}
+
+.search {
+    display: flex;
+}
+
+.search button {
+    padding: 8px 16px;
+    background-color: #4DCCBD;
+    color: #231651;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #EEF36A;
+    color: #231651;
+}
+
+.films {
+    display: grid;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.row {
+    display: grid;
+    gap: 16px;
+}
+
+.row.first{
+    grid-template-columns: 1fr;
+}
+
+.row.second{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.item {
+    background-color: #231651;
+    padding: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.poster img {
+    width: 100%;  
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.summary {
+    font-size: 1em;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.btn {
+    padding: 8px 16px;
+    background-color: #4DCCBD;
+    color: #231651;
+    border: none;
+    border-radius: 10px;
+    font-size: 2em;
+    font-family: 'Teko', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #EEF36A;
+    color: #231651;
+}
+
+footer {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 0.8em;
+    color: #4DCCBD;
+}
+
+@media (max-width: 720px) {
+    .top {
+        justify-content: space-between;
+        padding: 8px;
+    }
+
+    .menu {
+        display: none; 
+    }
+
+    .films {
+        grid-template-columns: 1fr; 
+    }
+
+    .row {
+        grid-template-columns: 1fr; 
+    }
+
+    .search {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 1.8em; 
+    }
+}
